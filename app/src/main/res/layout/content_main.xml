@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mitch.icecreamdorfner.MainActivity"
+    tools:showIn="@layout/activity_main"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        app:layout_constraintRight_toLeftOf="@+id/mmCheckBox"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/brownieCheckBox"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="9dp" />
+
+    <CheckBox
+        android:id="@+id/peanutsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/peanuts"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="43dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mmCheckBox" />
+
+    <CheckBox
+        android:id="@+id/almondsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/almonds"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/peanutsCheckBox"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/peanutsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/strawberryCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/strawberries"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/almondsCheckBox"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/almondsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/gummybearCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/gummy_bears"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/strawberryCheckBox"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/strawberryCheckBox" />
+
+    <CheckBox
+        android:id="@+id/mmCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/m_ms"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/brownieCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/brownieCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/brownies"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="213dp" />
+
+    <CheckBox
+        android:id="@+id/oreoCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/oreos"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/brownieCheckBox"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/brownieCheckBox" />
+
+    <CheckBox
+        android:id="@+id/marshmallowCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processCheckBoxChanged"
+        android:text="@string/marshmallows"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/oreoCheckBox"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/oreoCheckBox" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/hotfudgeTextView"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:text="@string/hot_fudge"
+        android:textSize="16sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/hotfudgeSeekBar"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hotfudgeSeekBar" />
+
+    <TextView
+        android:id="@+id/fudgeAmountTextView"
+        android:layout_width="42dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="13dp"
+        android:text="1 oz"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hotfudgeSeekBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marshmallowCheckBox"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteY="391dp"
+        tools:layout_editor_absoluteX="297dp"
+        android:layout_marginRight="21dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="112dp"
+        android:layout_height="34dp"
+        android:text="@string/price"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="80dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="173dp"
+        android:layout_height="0dp"
+        android:text="Ice Cream Sundae Maker"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/priceTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="2dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/theworksButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processTheWorks"
+        android:text="@string/the_works"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resetButton"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processOrder"
+        android:text="@string/order"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/resetButton" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="processReset"
+        android:text="@string/reset"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/theworksButton" />
+
+    <SeekBar
+        android:id="@+id/hotfudgeSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:max="3"
+        android:progress="1"
+        app:layout_constraintRight_toLeftOf="@+id/fudgeAmountTextView"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="88dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="91dp"
+        app:layout_constraintLeft_toLeftOf="@+id/sizeSpinner"
+        app:layout_constraintTop_toTopOf="@+id/strawberryCheckBox" />
+
+    <Spinner
+        android:id="@+id/flavorSpinner"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:background="@android:color/holo_blue_light"
+        android:entries="@array/flavor_items"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/almondsCheckBox"
+        app:layout_constraintRight_toRightOf="@+id/sizeSpinner"
+        android:layout_marginTop="139dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="139dp"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintLeft_toRightOf="@+id/hotfudgeTextView" />
+
+    <Spinner
+        android:id="@+id/sizeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:background="@android:color/holo_red_light"
+        android:entries="@array/size_items"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/fudgeAmountTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="185dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="185dp"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintLeft_toRightOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="44dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="43dp"
+        android:text="Flavor:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="43dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/flavorSpinner"
+        tools:layout_constraintBaseline_creator="1" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="39dp"
+        android:layout_height="19dp"
+        android:text="Size:"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintRight_toRightOf="@+id/peanutsCheckBox"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sizeSpinner"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
